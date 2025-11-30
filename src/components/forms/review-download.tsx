@@ -30,8 +30,8 @@ const ReviewDownloadForm = () => {
           "JPEG",
           10,
           10,
-          canvas.width * 0.2 - 10,
-          canvas.height * 0.2 - 10
+          pdf.internal.pageSize.getWidth() - 20,
+          canvas.height * ((pdf.internal.pageSize.getWidth() - 20) / canvas.width)
         );
         pdf.save("download.pdf");
       });
